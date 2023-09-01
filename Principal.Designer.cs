@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gbPrincipal = new System.Windows.Forms.GroupBox();
+            this.chartDistribucion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbNormal = new System.Windows.Forms.GroupBox();
             this.rbConvolucion = new System.Windows.Forms.RadioButton();
             this.rbBoxMuller = new System.Windows.Forms.RadioButton();
@@ -75,8 +67,15 @@
             this.numLambdaExponencial = new System.Windows.Forms.NumericUpDown();
             this.lblLambdaExponencial = new System.Windows.Forms.Label();
             this.lblMuestraExponencial = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistribucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.gbNormal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numIntervalosNormal)).BeginInit();
@@ -93,12 +92,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.numIntervalosExponencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMuestraExponencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLambdaExponencial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbPrincipal
             // 
-            this.gbPrincipal.Controls.Add(this.chart1);
+            this.gbPrincipal.Controls.Add(this.chartDistribucion);
             this.gbPrincipal.Controls.Add(this.dgvDatos);
             this.gbPrincipal.Controls.Add(this.gbNormal);
             this.gbPrincipal.Controls.Add(this.gbUniforme);
@@ -115,6 +113,22 @@
             this.gbPrincipal.TabStop = false;
             this.gbPrincipal.Text = "Generador y graficador de distribuciones";
             // 
+            // chartDistribucion
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartDistribucion.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartDistribucion.Legends.Add(legend5);
+            this.chartDistribucion.Location = new System.Drawing.Point(9, 340);
+            this.chartDistribucion.Name = "chartDistribucion";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartDistribucion.Series.Add(series5);
+            this.chartDistribucion.Size = new System.Drawing.Size(633, 324);
+            this.chartDistribucion.TabIndex = 27;
+            this.chartDistribucion.Text = "chart1";
+            // 
             // dgvDatos
             // 
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -125,78 +139,13 @@
             this.Column4,
             this.Column5,
             this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
+            this.Column7});
             this.dgvDatos.Location = new System.Drawing.Point(649, 340);
             this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersWidth = 51;
             this.dgvDatos.Size = new System.Drawing.Size(639, 324);
             this.dgvDatos.TabIndex = 26;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Desde";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Hasta";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Marca de Clase";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Fo";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Fe";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Fo Ac";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Fe Ac";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "C";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Cac";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 125;
             // 
             // gbNormal
             // 
@@ -281,7 +230,7 @@
             this.numMuestraNormal.Location = new System.Drawing.Point(116, 100);
             this.numMuestraNormal.Margin = new System.Windows.Forms.Padding(4);
             this.numMuestraNormal.Maximum = new decimal(new int[] {
-            50000,
+            1000000,
             0,
             0,
             0});
@@ -402,7 +351,7 @@
             this.numMuestraUniforme.Location = new System.Drawing.Point(116, 102);
             this.numMuestraUniforme.Margin = new System.Windows.Forms.Padding(4);
             this.numMuestraUniforme.Maximum = new decimal(new int[] {
-            50000,
+            1000000,
             0,
             0,
             0});
@@ -485,6 +434,7 @@
             this.btn_generar.TabIndex = 0;
             this.btn_generar.Text = "Generar";
             this.btn_generar.UseVisualStyleBackColor = true;
+            this.btn_generar.Click += new System.EventHandler(this.btn_generar_Click);
             // 
             // panel1
             // 
@@ -508,6 +458,7 @@
             this.rbExponencialNegativa.TabStop = true;
             this.rbExponencialNegativa.Text = "Exponencial Negativa";
             this.rbExponencialNegativa.UseVisualStyleBackColor = true;
+            this.rbExponencialNegativa.CheckedChanged += new System.EventHandler(this.rbExponencialNegativa_CheckedChanged);
             // 
             // rbNormal
             // 
@@ -578,7 +529,7 @@
             this.numMuestraExponencial.Location = new System.Drawing.Point(115, 70);
             this.numMuestraExponencial.Margin = new System.Windows.Forms.Padding(4);
             this.numMuestraExponencial.Maximum = new decimal(new int[] {
-            50000,
+            1000000,
             0,
             0,
             0});
@@ -620,21 +571,54 @@
             this.lblMuestraExponencial.TabIndex = 9;
             this.lblMuestraExponencial.Text = "Muestra:";
             // 
-            // chart1
+            // Column1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(9, 340);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(633, 324);
-            this.chart1.TabIndex = 27;
-            this.chart1.Text = "chart1";
+            this.Column1.HeaderText = "Li";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ls";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Marca de Clase";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "fo";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "fe";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Fo Ac";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Fe Ac";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
             // 
             // Principal
             // 
@@ -645,6 +629,7 @@
             this.Name = "Principal";
             this.Text = "Form1";
             this.gbPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartDistribucion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.gbNormal.ResumeLayout(false);
             this.gbNormal.PerformLayout();
@@ -665,7 +650,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numIntervalosExponencial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMuestraExponencial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLambdaExponencial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,15 +658,6 @@
 
         private System.Windows.Forms.GroupBox gbPrincipal;
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.GroupBox gbNormal;
         private System.Windows.Forms.RadioButton rbConvolucion;
         private System.Windows.Forms.RadioButton rbBoxMuller;
@@ -716,7 +691,14 @@
         private System.Windows.Forms.NumericUpDown numLambdaExponencial;
         private System.Windows.Forms.Label lblLambdaExponencial;
         private System.Windows.Forms.Label lblMuestraExponencial;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDistribucion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
 

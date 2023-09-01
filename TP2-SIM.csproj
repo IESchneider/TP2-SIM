@@ -71,10 +71,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Distribuciones\Exponencial.cs" />
+    <Compile Include="Distribuciones\ExponencialNegativa.cs" />
     <Compile Include="Distribuciones\Normal.cs" />
     <Compile Include="Distribuciones\Uniforme.cs" />
-    <Compile Include="Logica.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
