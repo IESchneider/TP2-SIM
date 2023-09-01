@@ -12,6 +12,9 @@ namespace TP2_SIM.Distribuciones
         public int CantidadMuestra { get; set; }
         public int CantidadIntervalos { get; set; }
         public double Lambda { get; set; }
-        
+
+
+        readonly Logica log = new Logica();
+
     }
 }
