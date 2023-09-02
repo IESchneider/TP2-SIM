@@ -28,15 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.gbPrincipal = new System.Windows.Forms.GroupBox();
             this.chartDistribucion = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbNormal = new System.Windows.Forms.GroupBox();
-            this.rbConvolucion = new System.Windows.Forms.RadioButton();
-            this.rbBoxMuller = new System.Windows.Forms.RadioButton();
             this.lblMediaNormal = new System.Windows.Forms.Label();
             this.numIntervalosNormal = new System.Windows.Forms.NumericUpDown();
             this.lblIntervalosNormal = new System.Windows.Forms.Label();
@@ -67,13 +72,6 @@
             this.numLambdaExponencial = new System.Windows.Forms.NumericUpDown();
             this.lblLambdaExponencial = new System.Windows.Forms.Label();
             this.lblMuestraExponencial = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDistribucion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -115,16 +113,16 @@
             // 
             // chartDistribucion
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartDistribucion.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartDistribucion.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.chartDistribucion.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartDistribucion.Legends.Add(legend4);
             this.chartDistribucion.Location = new System.Drawing.Point(9, 340);
             this.chartDistribucion.Name = "chartDistribucion";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartDistribucion.Series.Add(series5);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartDistribucion.Series.Add(series4);
             this.chartDistribucion.Size = new System.Drawing.Size(633, 324);
             this.chartDistribucion.TabIndex = 27;
             this.chartDistribucion.Text = "chart1";
@@ -147,10 +145,57 @@
             this.dgvDatos.Size = new System.Drawing.Size(639, 324);
             this.dgvDatos.TabIndex = 26;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Li";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Ls";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Marca de Clase";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "fo";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 125;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "fe";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 125;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Fo Ac";
+            this.Column6.MinimumWidth = 6;
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 125;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Fe Ac";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 125;
+            // 
             // gbNormal
             // 
-            this.gbNormal.Controls.Add(this.rbConvolucion);
-            this.gbNormal.Controls.Add(this.rbBoxMuller);
             this.gbNormal.Controls.Add(this.lblMediaNormal);
             this.gbNormal.Controls.Add(this.numIntervalosNormal);
             this.gbNormal.Controls.Add(this.lblIntervalosNormal);
@@ -167,30 +212,6 @@
             this.gbNormal.TabIndex = 15;
             this.gbNormal.TabStop = false;
             this.gbNormal.Text = "Distribución Normal";
-            // 
-            // rbConvolucion
-            // 
-            this.rbConvolucion.AutoSize = true;
-            this.rbConvolucion.Location = new System.Drawing.Point(239, 103);
-            this.rbConvolucion.Margin = new System.Windows.Forms.Padding(4);
-            this.rbConvolucion.Name = "rbConvolucion";
-            this.rbConvolucion.Size = new System.Drawing.Size(102, 20);
-            this.rbConvolucion.TabIndex = 15;
-            this.rbConvolucion.TabStop = true;
-            this.rbConvolucion.Text = "Convolucion";
-            this.rbConvolucion.UseVisualStyleBackColor = true;
-            // 
-            // rbBoxMuller
-            // 
-            this.rbBoxMuller.AutoSize = true;
-            this.rbBoxMuller.Location = new System.Drawing.Point(239, 65);
-            this.rbBoxMuller.Margin = new System.Windows.Forms.Padding(4);
-            this.rbBoxMuller.Name = "rbBoxMuller";
-            this.rbBoxMuller.Size = new System.Drawing.Size(90, 20);
-            this.rbBoxMuller.TabIndex = 14;
-            this.rbBoxMuller.TabStop = true;
-            this.rbBoxMuller.Text = "Box Muller";
-            this.rbBoxMuller.UseVisualStyleBackColor = true;
             // 
             // lblMediaNormal
             // 
@@ -471,6 +492,7 @@
             this.rbNormal.TabStop = true;
             this.rbNormal.Text = "Normal";
             this.rbNormal.UseVisualStyleBackColor = true;
+            this.rbNormal.CheckedChanged += new System.EventHandler(this.rbNormal_CheckedChanged);
             // 
             // rbUniforme
             // 
@@ -483,6 +505,7 @@
             this.rbUniforme.TabStop = true;
             this.rbUniforme.Text = "Uniforme";
             this.rbUniforme.UseVisualStyleBackColor = true;
+            this.rbUniforme.CheckedChanged += new System.EventHandler(this.rbUniforme_CheckedChanged);
             // 
             // gbExponencial
             // 
@@ -571,55 +594,6 @@
             this.lblMuestraExponencial.TabIndex = 9;
             this.lblMuestraExponencial.Text = "Muestra:";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Li";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ls";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Marca de Clase";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "fo";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "fe";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Fo Ac";
-            this.Column6.MinimumWidth = 6;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Fe Ac";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 125;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -659,8 +633,6 @@
         private System.Windows.Forms.GroupBox gbPrincipal;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.GroupBox gbNormal;
-        private System.Windows.Forms.RadioButton rbConvolucion;
-        private System.Windows.Forms.RadioButton rbBoxMuller;
         private System.Windows.Forms.Label lblMediaNormal;
         private System.Windows.Forms.NumericUpDown numIntervalosNormal;
         private System.Windows.Forms.Label lblIntervalosNormal;

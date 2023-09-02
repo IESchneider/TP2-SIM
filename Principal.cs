@@ -66,6 +66,57 @@ namespace TP2_SIM
 
             }
 
+            if (rbNormal.Checked == true)
+            {
+                Distribuciones.Normal normal = new Distribuciones.Normal();
+
+                normal.CantidadMuestra = Convert.ToInt32(numMuestraNormal.Text.Trim());
+                normal.Desviacion = Convert.ToDouble(numDesviacionNormal.Text.Trim());
+                normal.Media = Convert.ToDouble(numMediaNormal.Text.Trim());
+                normal.CantidadIntervalos = Convert.ToInt32(numIntervalosNormal.Text.Trim());
+                normal.Lista = listaVariablesAleatorias;
+
+                normal.Grafico = chartDistribucion;
+
+                normal.Grilla = dgvDatos;
+
+                if (normal.CantidadMuestra == 0 || normal.CantidadIntervalos == 0)
+                {
+                    MessageBox.Show("Error: La cantidad de muestra o la cantidad de intervalos no pueden ser 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    normal.GenerarDistribucion(normal);
+                    HabilitarElementos();
+                }
+            }
+
+            if (rbUniforme.Checked == true)
+            {
+
+                Uniforme uniforme = new Uniforme();
+
+                uniforme.CantidadMuestra = Convert.ToInt32(numMuestraUniforme.Text.Trim());
+                uniforme.Minimo = Convert.ToDouble(numMinimoUniforme.Text.Trim());
+                uniforme.Maximo = Convert.ToDouble(numMaximoUniforme.Text.Trim());
+                uniforme.CantidadIntervalos = Convert.ToInt32(numIntervalosUniforme.Text.Trim());
+                uniforme.Lista = listaVariablesAleatorias;
+                uniforme.Grafico = chartDistribucion;
+                uniforme.Grilla = dgvDatos;
+
+
+                if (uniforme.Maximo == 0 || uniforme.CantidadMuestra == 0 || uniforme.CantidadIntervalos == 0)
+                {
+                    MessageBox.Show("Error: El máximo, la cantidad de muestra o la cantidad de intervalos no puede ser 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    uniforme.GenerarDistribucion(uniforme);
+                    HabilitarElementos();
+                }
+
+            }
+
         }
 
         private void rbExponencialNegativa_CheckedChanged(object sender, EventArgs e)
@@ -77,6 +128,27 @@ namespace TP2_SIM
             gbUniforme.Visible = false;
             gbExponencial.Visible = true;
 
+        }
+
+        private void rbNormal_CheckedChanged(object sender, EventArgs e)
+        {
+            DeshabilitarElementos();
+            btn_generar.Show();
+
+            gbExponencial.Visible = false;
+            gbUniforme.Visible = false;
+            gbNormal.Visible = true;
+
+        }
+
+        private void rbUniforme_CheckedChanged(object sender, EventArgs e)
+        {
+            DeshabilitarElementos();
+            btn_generar.Show();
+
+            gbNormal.Visible = false;
+            gbExponencial.Visible = false;
+            gbUniforme.Visible = true;
         }
 
         private void DeshabilitarElementos()
@@ -92,5 +164,6 @@ namespace TP2_SIM
             dgvDatos.Visible = true;
             chartDistribucion.Visible = true;
         }
+
     }
 }
