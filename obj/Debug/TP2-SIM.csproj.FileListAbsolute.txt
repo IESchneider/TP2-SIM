@@ -21,3 +21,7 @@ C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.csproj.CoreCompileI
 C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.csproj.CopyComplete
 C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.exe
 C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.pdb
+C:\Users\schne\OneDrive\Escritorio\TP2-SIM\bin\Debug\TP2-SIM.exe.manifest
+C:\Users\schne\OneDrive\Escritorio\TP2-SIM\bin\Debug\TP2-SIM.application
+C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.exe.manifest
+C:\Users\schne\OneDrive\Escritorio\TP2-SIM\obj\Debug\TP2-SIM.application
